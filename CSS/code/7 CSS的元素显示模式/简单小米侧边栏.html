@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简单小米侧边栏</title>
+    <style>
+        .box .left {
+            float: left;
+        }
+        
+        .box .left a {
+            /* (实际有200的width) */
+            width: 170px;
+            height: 40px;
+            line-height: 40px;
+            background-color: #55585a;
+            color: white;
+            text-decoration: none;
+            display: block;
+            font-style: 14px;
+            padding-left: 30px;
+        }
+        
+        .box .left a:hover {
+            background-color: #ff6700;
+        }
+        
+        .box {
+            height: 40px;
+            width: 1000px;
+            background-color: pink;
+            margin: 100px auto;
+        }
+        
+        .box .right {
+            width: 800px;
+            height: 280px;
+            float: left;
+            background-color: blue;
+            background-image: url(../images/xiaomi.png);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="left">
+            <a href="#">手机 电话卡</a>
+            <a href="#">电视 盒子</a>
+            <a href="#">笔记本 平板</a>
+            <a href="#">出行 穿戴</a>
+            <a href="#">智能 路由器</a>
+            <a href="#">健康 儿童</a>
+            <a href="#">耳机 音响</a>
+        </div>
+        <div class="right"></div>
+    </div>
+
+</body>
+
+</html>

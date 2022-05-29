@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .nav li {
+            display: inline-block;
+            width: 100px;
+        }
+        
+        .nav li a {
+            width: 100px;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            display: inline-block;
+            text-decoration: none;
+            color: #333;
+        }
+        
+        .nav>li>a:hover {
+            background-color: #eee;
+            color: salmon;
+        }
+        
+        .nav li ul {
+            display: inline-block;
+        }
+        
+        .nav ul {
+            display: none;
+            position: absolute;
+            top: 41px;
+            left: 0;
+            width: 100%;
+            border-left: 1px solid #FECC5B;
+            border-right: 1px solid #FECC5B;
+        }
+        
+        .nav ul li {
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <ul class="nav">
+        <li>
+            <a href="#">微博</a>
+            <div>
+                <ul>
+                    <li>私信</li>
+                    <li>评论</li>
+                    <li>@我</li>
+                </ul>
+            </div>
+        </li>
+        <li>
+            <a href="#">微博</a>
+
+        </li>
+        <li>
+            <a href="#">微博</a>
+
+        </li>
+    </ul>
+
+</body>
+
+</html>

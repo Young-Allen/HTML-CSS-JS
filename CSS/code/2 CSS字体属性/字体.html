@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>这是字体属性的练习</title>
+    <style>
+        h2 {
+            /* 使用font-family属性定义文本字体系列 */
+            /* 如果有多个字体系列，则按照出现顺序检查是否有相应的字体系列 */
+            font-family: 'Microsoft Yahei', 'Hiragino Sans GB';
+            /* 字体粗细 */
+            font-weight: bold;
+        }
+        
+        p {
+            /* 这个700的后面不要跟单位  等价于bold，都是加粗的效果 */
+            /* 实际开发中，我们更提倡使用数字，表示加粗或者变细 */
+            font-weight: 700;
+        }
+        
+        body {
+            font-size: 16px;
+        }
+        /* 标题标签比较特殊，需要单独指定大小 */
+        
+        .qxie {
+            /* 设置文字倾斜 */
+            font-style: italic;
+        }
+        
+        em {
+            /* 设置文字正常 */
+            font-style: normal;
+        }
+        
+        .mixFont {
+            /* 复合属性：简写的方式、节约代码 */
+            /* font: font-style font-weight font-size/line-height font-family; */
+            font: italic 700 16px/20px 'Microsoft yahei';
+            /* 可以省略font-style和font-weight但是一定不能省略后面两个，否则代码无效 */
+            font: 26px/20px '黑体';
+        }
+    </style>
+</head>
+
+<body class="body">
+    <h2>
+        荣誉证书
+    </h2>
+    <P>江西财经大学</P>
+
+    <!-- 设置文字样式 -->
+    <P class="qxie">我是倾斜的字体</P>
+    <em>我是正常的字体</em>
+
+    <!-- 复合属性 -->
+    <p class="mixFont">我们来看一看复合属性的样子</p>
+</body>
+
+</html>

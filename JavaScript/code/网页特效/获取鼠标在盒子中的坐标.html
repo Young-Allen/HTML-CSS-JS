@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+            position: relative;
+            left: 100px;
+            top: 100px;
+        }
+        
+        .son {
+            width: 300px;
+            height: 50px;
+            background-color: black;
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="son"></div>
+    </div>
+    <script>
+        var box = document.querySelector('.box');
+        var son = document.querySelector('.son');
+        // box.addEventListener('click', function(e) {
+        //     var x = e.pageX - box.offsetLeft;
+        //     var y = e.pageY - box.offsetTop;
+
+        //     var des = '(' + x + ',' + y + ')';
+        //     box.innerHTML = des;
+        //     console.log('(' + x + ',' + y + ')');
+        // })
+
+        //(1) 当我们鼠标按下，就获得鼠标桌子盒子内的坐标
+        son.addEventListener('mousedown', function(e) {
+            var x = e.pageX - box.offsetLeft;
+            var y = e.pageY - box.offsetTop;
+            console.log('(' + x + ',' + y + ')');
+            //(2) 鼠标移动的时候，把鼠标在页面中的坐标 - 鼠标在盒子内的坐标就是 需要的left和top的值
+            document.addEventListener('mousemove', move)
+
+            function move(e) {
+                box.style.left = e.pageX - x + 'px';
+                box.style.top = e.pageY - y + 'px';
+            }
+            //(3) 鼠标弹起，就让鼠标移动事件移除
+            document.addEventListener('mouseup', function() {
+                document.removeEventListener('mousemove', move);
+            })
+        })
+    </script>
+</body>
+
+</html>

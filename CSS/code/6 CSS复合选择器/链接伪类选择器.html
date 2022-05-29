@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>这是链接伪类选择器的练习</title>
+    <style>
+        /* 1.a:link 选择所有未被访问过的链接 */
+        
+        a:link {
+            color: #333;
+            text-decoration: none;
+        }
+        /* 2.a:visited 选择点击过得（访问过的）链接 */
+        
+        a:visited {
+            color: orange;
+        }
+        /* 3.a:hover 选择鼠标经过的那个链接 */
+        
+        a:hover {
+            color: skyblue;
+        }
+        /* 4. a:active 选择的是我们鼠标正在按下还没有弹起鼠标的那个链接 */
+        
+        a:active {
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#">腾讯新闻</a><br>
+    <a href="http://www.baidu.com">百度</a>
+</body>
+
+</html>

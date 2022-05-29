@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 3000px;
+        }
+    </style>
+</head>
+
+<body>
+    <ul>
+        <li>12312312312</li>
+        <li>12312312312</li>
+        <li>12312312312</li>
+        <li>12312312312</li>
+    </ul>
+    <script>
+        //事件委托的核心原理：给父节点添加监听器，利用事件冒泡影响每一个子节点
+        var ul = document.querySelector('ul');
+        var lis = ul.children;
+        ul.addEventListener('click', function(e) {
+            for (var i = 0; i < lis.length; i++) {
+                lis[i].style.backgroundColor = '';
+            }
+            e.target.style.backgroundColor = 'pink';
+        })
+
+        document.addEventListener('click', function(e) {
+            //1. client 鼠标在可视区的 x 和 y 坐标
+            console.log(e.clientX);
+            console.log(e.clientY);
+            console.log('====================');
+            //2. page 鼠标在页面文档的 x 和 y 坐标
+            console.log(e.pageX);
+            console.log(e.pageY);
+        })
+    </script>
+</body>
+
+</html>

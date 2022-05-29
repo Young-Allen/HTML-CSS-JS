@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>这是一个表单</title>
+</head>
+
+<body>
+    <!-- 表单域 -->
+    <form action="xxx.php" method="get">
+        <!-- text是文本框 用户可以在里面输入任何文字 -->
+        用户名：<input type="text" name="pwd" value="请输入用户名" maxlength="6"> <br>
+
+        <!-- password是密码框 用户看不见输入的密码 -->
+        密码：<input type="password"> <br>
+
+        <!-- radio是单选按钮 可以实现多选一 -->
+        <!-- name  是表单元素的名字，这里性别单选按钮必须有相同的名字，才可以实现多选一 -->
+        <!-- checked  当页面打开的时候就可以默认选中这个按钮 -->
+        性别：男 <input type="radio" name="sex" checked="checked"> 女 <input type="radio" name="sex"> <br>
+
+        <!-- checkbox是复选框 可以实现多选的效果 -->
+        爱好：吃饭 <input type="checkbox"> 睡觉 <input type="checkbox"> 打豆豆<input type="checkbox"><br>
+
+        <!-- submit 提交表单元素的信息 -->
+        <input type="submit" value="注册">
+
+        <!-- reset 重置按钮，可以重置表单中用户输入的信息 -->
+        <input type="reset" value="重置">
+
+        <!-- 普通按钮 button 后期结合js 搭配使用 -->
+        <input type="button" value="获取短信验证码">
+
+        <!-- 文件域 使用场景 上次文件使用的 -->
+        上传头像：<input type="file"><br>
+
+        <!-- label标签 -->
+        性别：
+        <label for="nan">男<img src="C:\Users\19241\Pictures\0.jpg" alt="男" width="20"></label><input type="radio" name="sex" id=nan>
+        <label for="nv">女</label><input type="radio" name="sex" id=nv>
+
+        <!-- 下拉表单 -->
+        <br>籍贯：
+        <select>
+            <option>北京</option>
+            <option selected="selected">天津</option>
+            <option>上海</option>
+        </select>
+
+        <!-- 文本域 -->
+        <br>今日反馈:
+        <textarea rows="3" cols="50">
+            dsfsadfas
+        </textarea>
+    </form>
+
+</body>
+
+</html>

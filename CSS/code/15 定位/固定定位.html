@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .w {
+            width: 800px;
+            height: 2000px;
+            margin: 0 auto;
+            background-color: pink;
+        }
+        
+        .fixed {
+            position: fixed;
+            /* 1.走浏览器宽度的一半 */
+            left: 50%;
+            /* 2.利用margin走版心盒子宽度的一半 */
+            margin-left: 405px;
+            margin-top: 500px;
+            width: 200px;
+            height: 100px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="fixed"></div>
+    <div class="w">版心盒子 800像素</div>
+</body>
+
+</html>

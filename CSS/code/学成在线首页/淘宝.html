@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        li {
+            list-style: none;
+        }
+        
+        body {
+            background-color: pink;
+        }
+        
+        .tb {
+            position: relative;
+            width: 520px;
+            height: 280px;
+            margin: 200px auto;
+        }
+        
+        .focus img {
+            width: 520px;
+            height: 280px;
+            border-radius: 10px;
+            float: left;
+        }
+        
+        .x {
+            top: 50%;
+            margin-top: -15px;
+            width: 20px;
+            height: 30px;
+            text-decoration: none;
+            background: rgba(0, 0, 0, 0.3);
+            text-align: center;
+            line-height: 30px;
+            color: #fff;
+        }
+        
+        .prev {
+            position: absolute;
+            left: 0;
+            border-radius: 0 50% 50% 0;
+        }
+        
+        .prev:hover {
+            background: rgba(0, 0, 0, 0.6);
+        }
+        
+        .next {
+            position: absolute;
+            right: 0;
+            border-radius: 50% 0 0 50%;
+        }
+        
+        .next:hover {
+            background: rgba(0, 0, 0, 0.6);
+        }
+        
+        .nav {
+            position: absolute;
+            bottom: 15px;
+            left: 50%;
+            margin-left: -35px;
+            width: auto;
+            height: 13px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 7px;
+        }
+        
+        .nav li {
+            float: left;
+            width: 8px;
+            height: 8px;
+            background-color: pink;
+            border-radius: 50%;
+            margin: 3px;
+        }
+        
+        .nav .sel {
+            background-color: brown;
+        }
+        
+        .focus {
+            position: relative;
+            width: 500%;
+            float: left;
+        }
+        /* .focus ul {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 500%;
+            overflow: hidden;
+        }
+        
+        .focus ul li {
+            float: left;
+        } */
+    </style>
+    <script src="../../../JavaScript/code/网页特效/animate.js"></script>
+    <script src="taobao.js"></script>
+</head>
+
+<body>
+    <div class="tb">
+        <ul class="focus">
+            <li><img src="../images/tb.jpg" alt=""></li>
+            <li><img src="../images/taobao1.jpg" alt=""></li>
+            <li><img src="../images/taobao2.jpg" alt=""></li>
+            <li><img src="../images/taobao3.jpg" alt=""></li>
+        </ul>
+        <a href="javascript:;" class="prev x"> &lt; </a>
+        <a href="javascript:;" class="next x"> &gt; </a>
+
+        <ul class="nav">
+        </ul>
+    </div>
+</body>
+
+</html>

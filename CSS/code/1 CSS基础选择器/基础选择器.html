@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS语法规范</title>
+    <style>
+        /* 标签选择器 */
+        /* 选择器 {样式} */
+        /* 给谁改样式 {改什么样式} */
+        
+        p {
+            color: red;
+            font-size: 12px;
+        }
+        
+        h4 {
+            color: green;
+        }
+        /* 类选择器 */
+        /* 样式点定义、结构类（class）调用、一个或多个、开发最常用 */
+        
+        .red {
+            color: red;
+            font-size: 20px;
+        }
+        
+        .blue {
+            background-color: aqua;
+            width: 100px;
+            height: 150px;
+        }
+        
+        .green {
+            background-color: green;
+            width: 100px;
+            height: 150px;
+        }
+        
+        .font12 {
+            font-size: 12px;
+        }
+        /* id选择器 */
+        /* 样式#定义，结构id调用，只能调用一次，别人切勿使用。 */
+        
+        #runcolor {
+            color: brown;
+        }
+        /* 通配符选择器 */
+        
+        * {
+            color: crimson;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="red">我是类选择器的实例</div>
+    <h4>这是一个标题</h4>
+    <p>CSS语法规范</p>
+    <table>
+        <tr>
+            <td class="red">我是一个表格</td>
+        </tr>
+    </table>
+
+    <!-- 类选择器——多类名 -->
+    <!-- 可以调用多个类每个类之间用空格隔开 -->
+    <div class="blue font12"></div>
+    <div class="green"></div>
+    <div class="blue"></div>
+
+    <!-- id选择器 -->
+    <div id="runcolor" class="font12">实打实</div>
+</body>
+
+</html>

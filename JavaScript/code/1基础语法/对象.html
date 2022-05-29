@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // var obj = {
+        //         uname: 'jack',
+        //         age: 18,
+        //         sex: '男',
+        //         sayHi: function() {
+        //             console.log('hi');
+        //         }
+        //     }
+        //     //1.使用对象
+        //     //（1）对象名.属性名
+        //     console.log(obj.uname);
+        //     //（2）对象名['属性名']
+        //     console.log(obj['age']);
+        //     //2.使用方法
+        //     obj.sayHi();
+
+        // //new  构造函数名();
+        // function Star(uname, age, sex) {
+        //     this.name = uname;
+        //     this.age = age;
+        //     this.sex = sex;
+        //     this.sing = function(song) {
+        //         console.log(song);
+        //     }
+        // }
+        // // var ldh = new Star('jack', 18, 'm'); //创建一个对象
+        // // console.log(ldh.name);
+        // // ldh.sing('冰雨');
+
+        // obj = {
+        //     name: 'jack',
+        //     age: 18,
+        //     sex: 'm',
+        // }
+        // for (var k in obj) {
+        //     console.log(k); //输出属性名
+        //     console.log(obj[k]); //输出属性值
+        // }
+
+        //Date() 日期对象 是一个构造函数 必须使用new来创建我们的日期对象
+        // var date1 = new Date('2022-1-8 17:35:06');
+        // console.log(date1);
+        // var year1 = date1.getFullYear();
+        // var month = date1.getMonth() + 1;
+        // console.log(year1);
+        // console.log(month);
+        // var d1 = date1.getDate();
+        // console.log(d1);
+        // var hour1 = date1.getHours();
+        // console.log(hour1);
+
+        function getTime() {
+            var time = new Date();
+            var h = time.getHours();
+            h = h < 10 ? '0' + h : h;
+            var m = time.getMinutes();
+            m = m < 10 ? '0' + m : h;
+            var s = time.getSeconds();
+            s = s < 10 ? '0' + s : s;
+            return h + ':' + m + ':' + s;
+        }
+        console.log(getTime());
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        /* (4)双伪元素清除浮动 */
+        
+        .clearfix:before,
+        .clearfix:after {
+            content: "";
+            display: table;
+        }
+        
+        .clearfix:after {
+            clear: both;
+        }
+        
+        .clearfix {
+            *zoom: 1;
+        }
+        /*（3） :after伪元素法清除浮动 */
+        /* 主要就是在最后自动生成一个盒子类似额外标签法的原理 */
+        /* .clearfix:after {
+            content: "";
+            display: block;
+            height: 0;
+            clear: both;
+            visibility: hidden;
+        } */
+        /* 为了兼容低版本的浏览器使用的代码 */
+        /* .clearfix {
+            *zoom: 1;
+        }
+         */
+        
+        .box {
+            width: 800px;
+            background-color: skyblue;
+            margin: 100px auto 0;
+            border: 2px;
+            /* 父元素overflow清除浮动 */
+            overflow: hidden;
+        }
+        
+        .box .damao {
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            float: left;
+        }
+        
+        .box .ermao {
+            width: 300px;
+            height: 300px;
+            background-color: brown;
+            float: left;
+        }
+        
+        .footer {
+            height: 200px;
+            background-color: black;
+            color: white;
+        }
+        /* .clearfloat {
+            clear: both;
+        } */
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <div class="damao">大毛</div>
+        <div class="ermao">二毛</div>
+        <div class="ermao">二毛</div>
+        <!-- 在最后额外添加一个盒子，设置清除的代码 -->
+        <!-- <div class="clearfloat"></div> -->
+        <!-- 注意这个新增党的盒子要求必须的块级元素，不能是行内元素 -->
+        <!-- <span class="clearfloat"></span> -->
+    </div>
+    <div class="footer">footer</div>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <span class="hour">1</span>
+        <span class="minute">2</span>
+        <span class="second">3</span>
+    </div>
+    <button class="start">开启定时器</button>
+    <button class="stop">停止定时器</button>
+    <script>
+        //1. 获取元素
+        var hour = document.querySelector('.hour');
+        var minute = document.querySelector('.minute');
+        var second = document.querySelector('.second');
+        var inputTime = +new Date('2022-2-9 00:00:00');
+        var stopTime = document.querySelector('.stop');
+        var startTime = document.querySelector('.start');
+        countDown(); //我们先调用一次这个函数，防止第一次刷新页面有空白
+
+        //2. 开启定时器
+        startTime.addEventListener('click', function() {
+            var timer = setInterval(countDown, 1000);
+        })
+
+        //按下按钮停止定时器
+        stopTime.addEventListener('click', function() {
+            clearInterval(timer);
+        })
+
+        function countDown() {
+            var nowTime = +new Date(); //返回的是当前总的毫秒数
+            var times = (inputTime - nowTime) / 1000; //times是剩余时间总的秒数
+
+            var h = parseInt(times / 60 / 60 % 24); //时
+            // h = h < 10 ? '0' + h : h;
+            hour.innerHTML = h; //把剩余的小时给小时的盒子
+
+            var m = parseInt(times / 60 % 60); //分
+            // m = m < 10 ? '0' + m : m;
+            minute.innerHTML = m;
+
+            var s = parseInt(times % 60); //当前的秒
+            // s = s < 10 ? '0' + s : s;
+            second.innerHTML = s;
+        }
+    </script>
+</body>
+
+</html>

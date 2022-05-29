@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tab_list {
+            width: 900px;
+            height: 50px;
+            background-color: #ded6d6;
+            margin: auto;
+        }
+        
+        .tab_list ul li {
+            display: inline-block;
+            line-height: 50px;
+            padding: 0 20px;
+            cursor: pointer;
+        }
+        
+        .tab_con {
+            width: 900px;
+            margin: auto;
+        }
+        
+        .item {
+            display: none;
+        }
+        
+        .current {
+            background-color: #df2935;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tab">
+        <div class="tab_list">
+            <ul>
+                <li class="current">商品介绍</li>
+                <li>规格与包装</li>
+                <li>售后保障</li>
+                <li>商品评价（50000）</li>
+                <li>手机社区</li>
+            </ul>
+        </div>
+        <div class="tab_con">
+            <div class="item">
+                商品介绍模块
+            </div>
+            <div class="item">
+                规格与包装模块内容
+            </div>
+            <div class="item">
+                售后保障模块内容
+            </div>
+            <div class="item">
+                商品评价模块内容
+            </div>
+            <div class="item">
+                手机社区内容
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var tab_list = document.querySelector('.tab_list');
+        var lis = tab_list.querySelectorAll('li');
+        var items = document.querySelectorAll('.item');
+
+        for (var i = 0; i < lis.length; i++) {
+            // 开始给5个li设置索引号
+            lis[i].setAttribute('index', i);
+            lis[i].onclick = function() {
+                //干掉所有人 其余的li清除 class 这个类
+                for (var i = 0; i < lis.length; i++) {
+                    lis[i].className = '';
+                }
+                //留下我自己
+                this.className = 'current';
+
+                var index = this.getAttribute('index');
+                console.log(index);
+                //干掉所有人 让其余的item隐藏
+                for (var i = 0; i < items.length; i++) {
+                    items[i].style.display = 'none';
+                }
+                items[index].style.display = 'block';
+            }
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            background-color: #f3f5f7;
+        }
+        
+        .father {
+            position: relative;
+            width: 230px;
+            height: 270px;
+            margin: 100px auto;
+            background-color: white;
+        }
+        
+        .img img {
+            width: 100%;
+        }
+        
+        .father .new {
+            position: absolute;
+            top: 4px;
+            right: -3px;
+        }
+        
+        .father p {
+            font-size: 14px;
+            color: #050505;
+        }
+        
+        .word {
+            padding: 20px;
+        }
+        
+        .word a {
+            font-size: 14px;
+            color: #050505;
+            text-decoration: none;
+        }
+        
+        .word a:hover {
+            color: skyblue;
+        }
+        
+        .word .info {
+            font-size: 12px;
+            color: #999999;
+            margin-top: 20px;
+        }
+        
+        .info span {
+            color: orange;
+        }
+        
+        .jz {
+            position: relative;
+            margin: 0 auto;
+            width: 600px;
+            height: 600px;
+            background-color: pink;
+        }
+        
+        .jz .son {
+            position: absolute;
+            /* 绝对定位的盒子不能使用 margin: 0 auto 居中  */
+            /* margin: 0 auto; */
+            /* 使用以下方法来让绝对定位的盒子居中 */
+            /* 让盒子的左侧移动到父级元素的水平中心位置 */
+            left: 50%;
+            /* 让盒子向左移动自身宽度的一半 */
+            margin-left: -100px;
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="father">
+        <div class="img"><img src="../images/图层135.png" alt=""></div>
+        <div class="new"><img src="../images/形状24.png" alt=""></div>
+        <div class="word">
+            <a href="#">Android网络图片加载框架详解</a>
+            <div class="info">
+                <span>高级</span> • 1125人在学习
+            </div>
+        </div>
+    </div>
+    <div class="jz">
+        <div class="son">asd</div>
+    </div>
+</body>
+
+</html>

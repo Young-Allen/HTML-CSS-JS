@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我是子选择器的练习</title>
+    <style>
+        .nav>a {
+            color: red;
+        }
+        
+        .dd ul li a {
+            color: red;
+        }
+        
+        .not>a {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <a href="#">我是亲儿子</a>
+        <p>
+            <a href="#">我是孙子</a>
+        </p>
+    </div>
+
+    <div class="dd">
+        <ul>
+            <li><a href="#">百度</a></li>
+            <li><a href="#">百度</a></li>
+        </ul>
+    </div>
+
+    <div class="not">
+        <a href="#">大侄子</a>
+        <a href="#">侄子</a>
+        <ul>
+            <li><a href="#">小侄子</a></li>
+            <li><a href="#">中侄子</a></li>
+        </ul>
+    </div>
+</body>
+
+</html>

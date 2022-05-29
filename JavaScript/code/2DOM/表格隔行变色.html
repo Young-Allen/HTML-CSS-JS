@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table {
+            margin: auto;
+            width: 500px;
+        }
+        
+        thead {
+            background-color: pink;
+        }
+        
+        tbody tr {
+            border-bottom: solid gray;
+        }
+        
+        tbody tr td {
+            text-align: center;
+            color: blue;
+            margin: auto;
+        }
+        
+        .bg {
+            background-color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>性别</th>
+                <th>年龄</th>
+                <th>学号</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Jack</td>
+                <td>男</td>
+                <td>18</td>
+                <td>0231</td>
+            </tr>
+            <tr>
+                <td>Tom</td>
+                <td>男</td>
+                <td>20</td>
+                <td>0512</td>
+            </tr>
+            <tr>
+                <td>Mary</td>
+                <td>女</td>
+                <td>23</td>
+                <td>9213</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        //1. 获取元素
+        var trs = document.querySelector('tbody').querySelectorAll('tr');
+        //2. 利用循环绑定注册事件
+        for (var i = 0; i < trs.length; i++) {
+            //3. 注册鼠标经过事件
+            trs[i].onmouseover = function() {
+                    this.className = 'bg';
+                }
+                //4. 鼠标离开事件
+            trs[i].onmouseout = function() {
+                this.className = '';
+            }
+        }
+    </script>
+</body>
+
+</html>

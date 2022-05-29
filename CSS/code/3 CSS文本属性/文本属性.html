@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>这是一个文本属性的练习</title>
+    <style>
+        div {
+            /* 文本颜色 */
+            /* 三种表示形式 */
+            color: red;
+            color: #cc00ff;
+            color: rgb(241, 82, 22);
+        }
+        
+        h4 {
+            /* 文本居中对齐 */
+            text-align: center;
+            /* 文本左对齐 */
+            /* text-align: left; */
+            /* 文本右对齐 */
+            /* text-align: right; */
+        }
+        
+        p {
+            /* 默认，没有装饰线 */
+            /* 一般来说使用none来去除链接自带的下划线 */
+            text-decoration: none;
+            /* 添加下滑线 */
+            text-decoration: underline;
+            /* 添加上划线 */
+            text-decoration: overline;
+            /* 添加删除线 */
+            text-decoration: line-through;
+        }
+        
+        a {
+            text-decoration: none;
+        }
+        
+        .p {
+            /* 文本的第一行首行缩进多少距离 */
+            /* 使用文本像素来缩进 */
+            text-indent: 20px;
+            /* 使用em来缩进：相当于缩进当前元素2个文字大小的距离 */
+            text-indent: 2em;
+        }
+        
+        p {
+            line-height: 25px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>这是红色</div>
+    <h4>这是文本居中对齐</h4>
+    <p>这是下划线的练习</p>
+    <a href="#">这是去除了下划线的链接</a><br>
+    <p class="p">他只使用龙芯电脑，因为这是世界上唯一的，从BIOS、硬件驱动到操作系统，100%都是自由软件的电脑。他只使用龙芯电脑，因为这是世界上唯一的，从BIOS、硬件驱动到操作系统，100%都是自由软件的电脑。他只使用龙芯电脑，因为这是世界上唯一的，从BIOS、硬件驱动到操作系统，100%都是自由软件的电脑。</p>
+</body>
+
+</html>

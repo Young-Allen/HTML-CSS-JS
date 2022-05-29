@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>方法监听注册事件</button>
+    <script>
+        var btns = document.querySelector('button');
+        //事件监听注册事件 addEventListener
+        //(1) 里面的事件类型是字符串 必定加引号 而且不带 on
+        //(2) 同一个元素 同一个事件可以添加多个监听器（事件处理程序）
+        btns.addEventListener('click', function() {
+            alert(22);
+        })
+        btns.addEventListener('click', function() {
+            console.log(12313);
+        })
+    </script>
+</body>
+
+</html>

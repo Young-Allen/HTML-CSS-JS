@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .fa {
+            margin: auto;
+            width: 200px;
+            height: 200px;
+            background-color: black;
+        }
+        
+        .son {
+            margin: auto;
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="fa">
+        <div class="son"></div>
+    </div>
+
+    <script>
+        var father = document.querySelector('.fa');
+        var son = document.querySelector('.son');
+
+        //第三个参数为true 则是捕获阶段 document -> html -> body -> div
+        son.addEventListener('click', function() {
+            alert('son');
+        }, true);
+        //第三个参数为false或者是默认 则是冒泡阶段 div -> body -> html -> document
+        father.addEventListener('click', function() {
+            alert('father');
+        }, );
+    </script>
+</body>
+
+</html>

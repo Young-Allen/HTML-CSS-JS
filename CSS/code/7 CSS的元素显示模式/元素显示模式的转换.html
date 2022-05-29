@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a {
+            text-decoration: none;
+            width: 200px;
+            height: 100px;
+            background-color: red;
+            /* 将行内元素转换为块元素 */
+            /* 这样在整个红色区域内都可以点击链接 */
+            display: block;
+        }
+        
+        div {
+            width: 200px;
+            height: 100px;
+            background-color: skyblue;
+            /* 将div 块级元素转换为行内元素 */
+            /* 本来有高度和宽度的，转换之后只有字体显示的背景颜色 */
+            display: inline;
+        }
+        
+        span {
+            width: 200px;
+            height: 100px;
+            background-color: pink;
+            /* 将span 转化为行内块元素（一行可以有多个，可以设置高度和宽度） */
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="#">这是行内元素</a>
+    <div>这是块元素</div>
+    <span>行内元素转换为行内块元素</span>
+    <span>行内元素转换为行内块元素</span>
+    <span>行内元素转换为行内块元素</span>
+</body>
+
+</html>
